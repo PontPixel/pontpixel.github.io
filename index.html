@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Pont Pixel · Independent game studio</title>
-<meta name="description" content="Pont Pixel is an independent game studio in Bordeaux, France. Makers of ColorFind, a puzzle game where you mix paint drop by drop to bring gray pictures back to color.">
-<meta property="og:title" content="Pont Pixel · Makers of ColorFind">
+<meta name="description" content="Pont Pixel is an independent game studio in Bordeaux, France. Makers of ColorBook, a puzzle game where you mix paint drop by drop to bring gray pictures back to color.">
+<meta property="og:title" content="Pont Pixel · Makers of ColorBook">
 <meta property="og:description" content="Mix paint drop by drop to bring gray pictures back to color.">
 <meta property="og:url" content="https://pontpixel.com/">
 <meta property="og:type" content="website">
@@ -102,11 +102,11 @@ footer nav{display:flex;gap:20px}
   <div class="hero">
     <div>
       <p class="eyebrow">Pont Pixel presents</p>
-      <h1>ColorFind</h1>
+      <h1>ColorBook</h1>
       <p class="lede">Mix paint drop by drop to bring gray pictures back to color.</p>
       <p class="status">A relaxing color-mixing puzzle from Pont Pixel, an independent game studio in Bordeaux, France. Play it in your browser today. Coming soon to iPhone and Android.</p>
       <div class="cta">
-        <a class="btn" href="https://vrlaskavyi.github.io/colorfind/">Play in your browser</a>
+        <a class="btn" href="/colorbook/">Play in your browser</a>
         <a class="btn ghost" href="#contact">Contact</a>
       </div>
     </div>
@@ -200,7 +200,7 @@ footer nav{display:flex;gap:20px}
 <script>
 (function () {
   document.getElementById('year').textContent = new Date().getFullYear();
-  // The ColorFind idea in one animation: every part starts gray and gets its color back, one by one.
+  // The ColorBook idea in one animation: every part starts gray and gets its color back, one by one.
   var regions = Array.prototype.slice.call(document.querySelectorAll('#scene .r'))
     .sort(function (a, b) { return a.dataset.o - b.dataset.o; });
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
