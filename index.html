@@ -4,94 +4,96 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Pont Pixel · Independent game studio</title>
-<meta name="description" content="Pont Pixel is an independent studio making calm, clever puzzle games for mobile and the web. Makers of ColorFind.">
-<meta property="og:title" content="Pont Pixel · Independent game studio">
-<meta property="og:description" content="Calm, clever puzzle games for mobile and the web. Makers of ColorFind.">
+<meta name="description" content="Pont Pixel is an independent game studio in Bordeaux, France. Makers of ColorFind, a puzzle game where you mix paint drop by drop to bring gray pictures back to color.">
+<meta property="og:title" content="Pont Pixel · Makers of ColorFind">
+<meta property="og:description" content="Mix paint drop by drop to bring gray pictures back to color.">
 <meta property="og:url" content="https://pontpixel.com/">
 <meta property="og:type" content="website">
 <link rel="canonical" href="https://pontpixel.com/">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 7 6'%3E%3Cpath fill='%231f2330' d='M0 0h7v1H0zM0 1h2v5H0zM5 1h2v5H5zM2 1h1v1H2zM4 1h1v1H4z'/%3E%3Crect x='3' y='1' width='1' height='1' fill='%2300a8eb'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='8' height='8' fill='%23E0445E'/%3E%3Crect x='8' width='8' height='8' fill='%23F2C200'/%3E%3Crect y='8' width='8' height='8' fill='%232F6BD8'/%3E%3Crect x='8' y='8' width='8' height='8' fill='%23A0A3A8'/%3E%3C/svg%3E">
 <style>
 /* System fonts only: no third-party requests, so the privacy note below stays true. */
 :root{
-  --bg:#f6f7f9; --panel:#fff; --ink:#1f2330; --muted:#6b7185; --line:#e4e6ec;
-  --c:#00a8eb; --m:#e3128a; --y:#ffd60a;
-  --shadow:0 1px 2px rgba(20,24,40,.05),0 10px 30px rgba(20,24,40,.07);
+  --bg:#ECEDEF; --panel:#F7F7F8; --ink:#26282C; --muted:#62656B; --line:#D3D5D8;
+  --red:#E0445E; --yellow:#F2C200; --blue:#2F6BD8; --gray:#A0A3A8;
   color-scheme:light;
 }
 @media (prefers-color-scheme:dark){:root{
-  --bg:#12141b; --panel:#1b1e28; --ink:#eef0f5; --muted:#9aa0b3; --line:#2a2e3b;
-  --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px rgba(0,0,0,.35); color-scheme:dark;
+  --bg:#1E1F22; --panel:#26282C; --ink:#E9EAEC; --muted:#A2A5AB; --line:#3A3C41; color-scheme:dark;
 }}
-*{box-sizing:border-box}
+*,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
-a{color:inherit}
-.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.55 -apple-system,BlinkMacSystemFont,"Avenir Next","Segoe UI",Roboto,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration-thickness:1px;text-underline-offset:3px}
+a:hover{color:var(--red)}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:2px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 clamp(20px,5vw,48px)}
+
 /* Header */
-header{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 85%,transparent);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid transparent}
-header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
-.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:750;font-size:18px;letter-spacing:-.2px}
-.mark{width:28px;height:24px;flex:none}
-nav{display:flex;gap:22px;font-size:15px}
-nav a{text-decoration:none;color:var(--muted)}nav a:hover{color:var(--ink)}
-/* Hero */
-.hero{padding:88px 0 72px;display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center}
-.eyebrow{font-size:13px;font-weight:650;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0 0 14px}
-h1{font-size:clamp(38px,6vw,64px);line-height:1.02;letter-spacing:-.035em;margin:0 0 20px;font-weight:800}
-.lead{font-size:clamp(18px,2.2vw,21px);color:var(--muted);max-width:34ch;margin:0 0 30px}
-.btn{display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:var(--bg);text-decoration:none;font-weight:650;font-size:16px;padding:13px 22px;border-radius:99px}
-.btn.ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--line)}
+header{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.mark{display:inline-flex;align-items:center;gap:10px;font-weight:650;font-size:1.05rem;text-decoration:none}
+.mark svg{width:22px;height:22px}
+nav.top{display:flex;gap:24px;font-size:15px}
+nav.top a{text-decoration:none;color:var(--muted)}nav.top a:hover{color:var(--ink)}
+
+/* Hero: text + the gray-to-color balloon scene */
+.hero{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,80px);align-items:center;padding:clamp(24px,6vh,64px) 0 clamp(56px,9vh,96px)}
+.eyebrow{font-size:13px;font-weight:650;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0 0 16px}
+h1{font-size:clamp(3rem,8.5vw,6rem);line-height:.92;letter-spacing:-.04em;font-weight:800;margin:0 0 24px}
+.lede{font-size:clamp(1.2rem,2.2vw,1.45rem);line-height:1.4;max-width:26ch;margin:0 0 16px}
+.status{color:var(--muted);margin:0 0 30px;max-width:42ch}
 .cta{display:flex;gap:10px;flex-wrap:wrap}
-.pixels{justify-self:center;width:min(100%,340px)}
-.pixels rect{transition:transform .6s cubic-bezier(.2,1.4,.4,1)}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:var(--bg);text-decoration:none;font-weight:650;font-size:16px;padding:13px 22px;border-radius:999px}
+.btn:hover{color:var(--bg);opacity:.9}
+.btn.ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--line)}
+.btn.ghost:hover{color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}
+figure{margin:0;justify-self:center;width:100%;max-width:420px}
+figure svg{display:block;width:100%;height:auto;border-radius:28px}
+figure svg .r{transition:fill .7s cubic-bezier(.3,.7,.2,1)}
+figcaption{display:flex;justify-content:space-between;align-items:center;margin-top:14px;color:var(--muted);font-size:.95rem}
+button{font:inherit;font-weight:600;font-size:.95rem;color:var(--ink);background:transparent;border:1.5px solid var(--line);border-radius:999px;padding:6px 16px;cursor:pointer}
+button:hover{border-color:var(--ink)}
+
 /* Sections */
-section{padding:64px 0;border-top:1px solid var(--line);scroll-margin-top:64px}
-h2{font-size:clamp(28px,3.6vw,38px);letter-spacing:-.025em;line-height:1.1;margin:0 0 14px;font-weight:780}
-.sec-lead{color:var(--muted);max-width:60ch;margin:0 0 34px}
-/* Game card */
-.game{display:grid;grid-template-columns:auto 1fr;gap:36px;align-items:center;background:var(--panel);border-radius:28px;padding:32px;box-shadow:var(--shadow)}
-.game img{width:150px;height:auto;transform:rotate(-4deg);border-radius:10px;box-shadow:0 12px 30px rgba(20,24,40,.18)}
-.game h3{font-size:28px;margin:0 0 6px;letter-spacing:-.02em}
-.tag{display:inline-block;font-size:13px;font-weight:650;color:var(--muted);background:var(--bg);border-radius:99px;padding:4px 12px;margin:0 6px 12px 0}
-.game p{margin:0 0 20px;color:var(--muted);max-width:52ch}
-/* About */
-.values{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.value{background:var(--panel);border-radius:22px;padding:24px;box-shadow:var(--shadow)}
-.value i{display:block;width:14px;height:14px;border-radius:3px;margin-bottom:14px}
-.value b{display:block;font-size:18px;margin-bottom:4px}
-.value span{color:var(--muted);font-size:15.5px}
-/* Contact */
+section{padding:64px 0;border-top:1px solid var(--line);scroll-margin-top:68px}
+h2{font-size:clamp(28px,3.6vw,40px);letter-spacing:-.03em;line-height:1.1;margin:0 0 14px;font-weight:800}
+.sec-lead{color:var(--muted);max-width:60ch;margin:0 0 32px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:var(--panel);border-radius:22px;padding:24px}
+.card i{display:block;width:14px;height:14px;margin-bottom:14px}
+.card b{display:block;font-size:18px;margin-bottom:4px}
+.card span{color:var(--muted);font-size:15.5px}
 .contact{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.contact .value a{font-weight:650;text-decoration:none;border-bottom:1.5px solid var(--c)}
+.contact a{font-weight:650}
 dl{margin:0}dt{font-size:13px;font-weight:650;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:14px}dt:first-child{margin-top:0}dd{margin:2px 0 0}
-/* Footer */
-footer{border-top:1px solid var(--line);padding:32px 0 48px;color:var(--muted);font-size:14px}
-footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
-#privacy{padding:48px 0}
-#privacy p{color:var(--muted);max-width:70ch;font-size:15.5px}
+.fine p{color:var(--muted);max-width:72ch;font-size:15.5px;margin:0 0 12px}
+.fine h3{font-size:18px;margin:28px 0 8px}
+
+footer{border-top:1px solid var(--line);padding:28px 0 40px;color:var(--muted);font-size:.9rem}
+footer .row{display:flex;flex-wrap:wrap;gap:8px 28px;justify-content:space-between}
+footer nav{display:flex;gap:20px}
+
 @media (max-width:760px){
-  nav{display:none}
-  .hero{grid-template-columns:1fr;padding:48px 0 40px;gap:28px}
-  .pixels{width:220px;justify-self:start;order:-1}
-  .game{grid-template-columns:1fr;padding:24px;gap:22px;text-align:left}
-  .game img{width:110px}
-  .values,.contact{grid-template-columns:1fr}
+  nav.top{display:none}
+  .hero{grid-template-columns:1fr}
+  figure{order:-1;max-width:360px}
+  .cards,.contact{grid-template-columns:1fr}
   section{padding:48px 0}
 }
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.pixels rect{transition:none}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}figure svg .r{transition:none}}
 </style>
 </head>
 <body>
 
 <header>
   <div class="wrap">
-    <a class="brand" href="#top" aria-label="Pont Pixel home">
-      <svg class="mark" viewBox="0 0 7 6" shape-rendering="crispEdges" aria-hidden="true"><path fill="currentColor" d="M0 0h7v1H0zM0 1h2v5H0zM5 1h2v5H5zM2 1h1v1H2zM4 1h1v1H4z"/><rect x="3" y="1" width="1" height="1" fill="var(--c)"/></svg>
+    <a class="mark" href="#top" aria-label="Pont Pixel home">
+      <svg viewBox="0 0 16 16" aria-hidden="true"><rect width="8" height="8" fill="#E0445E"/><rect x="8" width="8" height="8" fill="#F2C200"/><rect y="8" width="8" height="8" fill="#2F6BD8"/><rect x="8" y="8" width="8" height="8" fill="#A0A3A8"/></svg>
       Pont Pixel
     </a>
-    <nav aria-label="Sections">
-      <a href="#games">Games</a><a href="#about">Studio</a><a href="#contact">Contact</a>
+    <nav class="top" aria-label="Sections">
+      <a href="#studio">Studio</a><a href="#contact">Contact</a><a href="#legal">Legal</a>
     </nav>
   </div>
 </header>
@@ -99,52 +101,62 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <main id="top" class="wrap">
   <div class="hero">
     <div>
-      <p class="eyebrow">Independent game studio</p>
-      <h1>Small games.<br>Bright ideas.</h1>
-      <p class="lead">Pont Pixel makes calm, clever puzzle games for phones and the web. Easy to pick up, hard to put down.</p>
+      <p class="eyebrow">Pont Pixel presents</p>
+      <h1>ColorFind</h1>
+      <p class="lede">Mix paint drop by drop to bring gray pictures back to color.</p>
+      <p class="status">A relaxing color-mixing puzzle from Pont Pixel, an independent game studio in Bordeaux, France. Play it in your browser today. Coming soon to iPhone and Android.</p>
       <div class="cta">
-        <a class="btn" href="#games">See our games</a>
-        <a class="btn ghost" href="#contact">Get in touch</a>
+        <a class="btn" href="https://vrlaskavyi.github.io/colorfind/">Play in your browser</a>
+        <a class="btn ghost" href="#contact">Contact</a>
       </div>
     </div>
-    <!-- A pixel bridge ("pont" is French for bridge) -->
-    <svg class="pixels" viewBox="0 0 9 7" shape-rendering="crispEdges" role="img" aria-label="Pixel-art bridge logo">
-      <g fill="var(--ink)">
-        <rect x="0" y="0" width="9" height="1"/>
-        <rect x="0" y="1" width="2" height="6"/><rect x="7" y="1" width="2" height="6"/>
-        <rect x="2" y="1" width="1" height="1"/><rect x="6" y="1" width="1" height="1"/>
-      </g>
-      <rect x="3" y="1" width="1" height="1" fill="var(--c)"/>
-      <rect x="4" y="1" width="1" height="1" fill="var(--m)"/>
-      <rect x="5" y="1" width="1" height="1" fill="var(--y)"/>
-    </svg>
+
+    <figure>
+      <svg id="scene" viewBox="0 0 400 480" role="img" aria-labelledby="scene-title">
+        <title id="scene-title">Hot-air balloons over green hills, restoring from gray to full color</title>
+        <rect class="r" data-o="0" width="400" height="480" fill="#BFE3F2"/>
+        <circle class="r" data-o="1" cx="318" cy="92" r="38" fill="#F7C948"/>
+        <g class="r" data-o="2" fill="#FFFFFF">
+          <ellipse cx="80" cy="96" rx="44" ry="16"/><ellipse cx="108" cy="84" rx="30" ry="16"/>
+          <ellipse cx="300" cy="200" rx="40" ry="13"/><ellipse cx="324" cy="190" rx="24" ry="13"/>
+        </g>
+        <path class="r" data-o="3" d="M0 372 C80 322 160 342 230 362 C300 382 350 332 400 342 L400 480 L0 480Z" fill="#8FCB98"/>
+        <path class="r" data-o="4" d="M0 418 C100 388 180 428 260 418 C330 410 370 398 400 403 L400 480 L0 480Z" fill="#3E9A62"/>
+        <g transform="translate(18 150) scale(.42)">
+          <path class="r" data-o="5" d="M200 90 C150 90 120 130 120 175 C120 225 170 255 185 280 L215 280 C230 255 280 225 280 175 C280 130 250 90 200 90Z" fill="#2F6BD8"/>
+          <path class="r" data-o="6" d="M200 90 C180 110 175 150 178 175 C180 220 190 255 193 280 L207 280 C210 255 220 220 222 175 C225 150 220 110 200 90Z" fill="#FFFFFF"/>
+          <path d="M186 280 L190 300 M214 280 L210 300" stroke="#6B6E73" stroke-width="3"/>
+          <rect class="r" data-o="7" x="188" y="300" width="24" height="20" rx="3" fill="#9A6B3F"/>
+        </g>
+        <g transform="translate(212 216) scale(.5)">
+          <path class="r" data-o="8" d="M200 90 C150 90 120 130 120 175 C120 225 170 255 185 280 L215 280 C230 255 280 225 280 175 C280 130 250 90 200 90Z" fill="#F28C28"/>
+          <path class="r" data-o="9" d="M200 90 C180 110 175 150 178 175 C180 220 190 255 193 280 L207 280 C210 255 220 220 222 175 C225 150 220 110 200 90Z" fill="#7A3FB8"/>
+          <path d="M186 280 L190 300 M214 280 L210 300" stroke="#6B6E73" stroke-width="3"/>
+          <rect class="r" data-o="10" x="188" y="300" width="24" height="20" rx="3" fill="#9A6B3F"/>
+        </g>
+        <g transform="translate(-20 -12) scale(1.1)">
+          <path class="r" data-o="11" d="M200 90 C150 90 120 130 120 175 C120 225 170 255 185 280 L215 280 C230 255 280 225 280 175 C280 130 250 90 200 90Z" fill="#E0445E"/>
+          <path class="r" data-o="12" d="M200 90 C180 110 175 150 178 175 C180 220 190 255 193 280 L207 280 C210 255 220 220 222 175 C225 150 220 110 200 90Z" fill="#F2C200"/>
+          <path d="M186 280 L190 300 M214 280 L210 300" stroke="#6B6E73" stroke-width="2"/>
+          <rect class="r" data-o="13" x="188" y="300" width="24" height="20" rx="3" fill="#9A6B3F"/>
+        </g>
+      </svg>
+      <figcaption>
+        <span>Level 1: Balloons</span>
+        <button type="button" id="replay">Restore again</button>
+      </figcaption>
+    </figure>
   </div>
 </main>
 
-<section id="games">
-  <div class="wrap">
-    <h2>Our games</h2>
-    <p class="sec-lead">We build short, satisfying puzzle games with a light touch and no clutter.</p>
-    <article class="game">
-      <img src="img/colorfind.jpg" alt="ColorFind logo" width="150" height="231" loading="lazy">
-      <div>
-        <h3>ColorFind</h3>
-        <span class="tag">Puzzle</span><span class="tag">iOS · Android · Web</span>
-        <p>Mix drops of paint to match the exact color, then bring faded pictures back to life, from a simple bowl of fruit to famous works of art.</p>
-        <a class="btn" href="https://vrlaskavyi.github.io/colorfind/">Play in your browser</a>
-      </div>
-    </article>
-  </div>
-</section>
-
-<section id="about">
+<section id="studio">
   <div class="wrap">
     <h2>The studio</h2>
-    <p class="sec-lead">Pont means “bridge” in French. We bridge simple rules and deep play, and we design every game to be understood in seconds.</p>
-    <div class="values">
-      <div class="value"><i style="background:var(--c)"></i><b>Clear</b><span>No walls of text. Each level teaches one idea at a time.</span></div>
-      <div class="value"><i style="background:var(--m)"></i><b>Fair</b><span>Every puzzle is solvable, and progress never depends on luck.</span></div>
-      <div class="value"><i style="background:var(--y)"></i><b>Kind</b><span>Relaxing sessions that respect players’ time.</span></div>
+    <p class="sec-lead">Pont means “bridge” in French. Pont Pixel bridges simple rules and deep play: small, calm puzzle games that anyone can understand in seconds, for phones and the web.</p>
+    <div class="cards">
+      <div class="card"><i style="background:var(--red)"></i><b>Clear</b><span>No walls of text. Each level teaches one idea at a time.</span></div>
+      <div class="card"><i style="background:var(--yellow)"></i><b>Fair</b><span>Every puzzle is solvable, and progress never depends on luck.</span></div>
+      <div class="card"><i style="background:var(--blue)"></i><b>Kind</b><span>Relaxing sessions that respect players’ time.</span></div>
     </div>
   </div>
 </section>
@@ -154,36 +166,70 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <h2>Contact</h2>
     <p class="sec-lead">For players, press and partners.</p>
     <div class="contact">
-      <div class="value">
-        <dl>
-          <dt>Email</dt><dd><a href="mailto:hello@pontpixel.com">hello@pontpixel.com</a></dd>
-          <dt>Support</dt><dd><a href="mailto:support@pontpixel.com">support@pontpixel.com</a></dd>
-        </dl>
-      </div>
-      <div class="value">
-        <dl>
-          <dt>Company</dt><dd>Pont Pixel</dd>
-          <dt>Location</dt><dd>France</dd>
-        </dl>
-      </div>
+      <div class="card"><dl>
+        <dt>Support</dt><dd><a href="mailto:support@pontpixel.com">support@pontpixel.com</a></dd>
+        <dt>Business</dt><dd><a href="mailto:hello@pontpixel.com">hello@pontpixel.com</a></dd>
+      </dl></div>
+      <div class="card"><dl>
+        <dt>Studio</dt><dd>Pont Pixel</dd>
+        <dt>Location</dt><dd>Bordeaux, France</dd>
+      </dl></div>
     </div>
   </div>
 </section>
 
-<section id="privacy">
+<section id="legal" class="fine">
   <div class="wrap">
-    <h2>Privacy</h2>
-    <p>This website does not use cookies, analytics or trackers, and it does not collect personal data. It is hosted on GitHub Pages, which may keep standard server logs, such as IP addresses, for security. Each of our games has its own privacy policy, linked from its store page. Questions: <a href="mailto:hello@pontpixel.com">hello@pontpixel.com</a>.</p>
+    <h2>Legal</h2>
+    <h3 id="mentions">Legal notice (Mentions légales)</h3>
+    <p><b>Publisher (Éditeur):</b> Vsevolod Laskavyi, Entrepreneur individuel (EI), trading as PontPixel. RCS Bordeaux 944 738 525. 282 Rue Turenne, 33000 Bordeaux, France. Contact: <a href="mailto:hello@pontpixel.com">hello@pontpixel.com</a>.</p>
+    <p><b>Publication director (Directeur de la publication):</b> Vsevolod Laskavyi.</p>
+    <p><b>Host (Hébergeur):</b> GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA.</p>
+    <h3 id="privacy">Privacy</h3>
+    <p>This website does not use cookies, analytics or trackers, and does not collect personal data. Our host, GitHub, may keep standard server logs, such as IP addresses, for security. If you email us, we use your message only to reply. Each of our games has its own privacy policy, linked from its store page. Questions: <a href="mailto:hello@pontpixel.com">hello@pontpixel.com</a>.</p>
   </div>
 </section>
 
 <footer>
-  <div class="wrap">
-    <span>© <span id="year">2026</span> Pont Pixel. All rights reserved.</span>
-    <span><a href="#privacy">Privacy</a> · <a href="mailto:hello@pontpixel.com">hello@pontpixel.com</a></span>
+  <div class="wrap row">
+    <span>© <span id="year">2026</span> Pont Pixel</span>
+    <nav aria-label="Legal"><a href="#mentions">Legal notice</a><a href="#privacy">Privacy</a></nav>
   </div>
 </footer>
 
-<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+<script>
+(function () {
+  document.getElementById('year').textContent = new Date().getFullYear();
+  // The ColorFind idea in one animation: every part starts gray and gets its color back, one by one.
+  var regions = Array.prototype.slice.call(document.querySelectorAll('#scene .r'))
+    .sort(function (a, b) { return a.dataset.o - b.dataset.o; });
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var timers = [];
+  function toGray(hex) {
+    var n = parseInt(hex.slice(1), 16);
+    var y = Math.round(0.299 * (n >> 16) + 0.587 * (n >> 8 & 255) + 0.114 * (n & 255));
+    y = Math.round(y * 0.75 + 128 * 0.25); // pull toward mid-gray so it reads as washed out
+    return 'rgb(' + y + ',' + y + ',' + y + ')';
+  }
+  regions.forEach(function (el) { el.dataset.c = el.getAttribute('fill'); el.dataset.g = toGray(el.dataset.c); });
+  function setGray() { regions.forEach(function (el) { el.style.fill = el.dataset.g; }); }
+  function restore() {
+    timers.forEach(clearTimeout); timers = [];
+    regions.forEach(function (el, i) {
+      timers.push(setTimeout(function () { el.style.fill = el.dataset.c; }, reduce ? 0 : 500 + i * 170));
+    });
+  }
+  setGray();
+  requestAnimationFrame(function () { requestAnimationFrame(restore); });
+  document.getElementById('replay').addEventListener('click', function () {
+    timers.forEach(clearTimeout); timers = [];
+    regions.forEach(function (el) { el.style.transition = 'none'; });
+    setGray();
+    void document.getElementById('scene').getBoundingClientRect();
+    regions.forEach(function (el) { el.style.transition = ''; });
+    restore();
+  });
+})();
+</script>
 </body>
 </html>
