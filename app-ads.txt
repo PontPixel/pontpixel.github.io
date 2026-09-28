@@ -1,0 +1,5 @@
+# app-ads.txt for Pont Pixel (pontpixel.com)
+# Authorized sellers of ad inventory in Pont Pixel apps.
+# No ad networks yet. Add the AdMob line once the AdMob account exists:
+# google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
+contact=hello@pontpixel.com
